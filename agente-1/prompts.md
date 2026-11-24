@@ -23,20 +23,24 @@ Genera código sencillo, sin bloques redundantes ni referencias a funciones o va
 **Creación de herramientas (Métodos por institución y autor)**
 
 ```
-Amplía la herramienta de OpenAlex existente incorporando los siguientes métodos:
+Amplía la herramienta de OpenAlex existente añadiendo únicamente dos métodos:
 
-- `search_open_alex_works_by_institution`: recibe el nombre o ID de una institución, término de búsqueda opcional, año inicial, año final y número máximo de resultados (5 por defecto). Devuelve el nombre e ID de la institución, el total de resultados y la lista de publicaciones.
-- `search_open_alex_works_by_author`: recibe el nombre, ID u ORCID de un autor, término de búsqueda opcional, año inicial, año final y número máximo de resultados (5 por defecto). Devuelve el nombre e ID del autor, el total de resultados y la lista de publicaciones.
+- `search_open_alex_works_by_institution`: recibe el nombre o ID de una institución, término de búsqueda opcional, año inicial, año final y número máximo de resultados (5 por defecto). Devuelve el nombre e ID de la institución, total de resultados y lista de publicaciones.
+- `search_open_alex_works_by_author`: recibe el nombre, ID u ORCID de un autor, término de búsqueda opcional, año inicial, año final y número máximo de resultados (5 por defecto). Devuelve el nombre e ID del autor, total de resultados y lista de publicaciones.
 
-Identifica primero al autor o institución en OpenAlex y utiliza su ID para filtrar las publicaciones. Si existen coincidencias ambiguas, devuelve las opciones disponibles.
+Consulta primero `/institutions` o `/authors` para identificar la entidad y después `/works` para recuperar sus publicaciones mediante los filtros `institutions.id` o `author.id`, respectivamente.
 
-Define cada método como una función independiente, con parámetros tipados y documentación.
+Si existen múltiples coincidencias, devuelve las opciones disponibles. Recuerda que `results` es una lista de diccionarios.
 
-Utiliza JSON como formato de salida, gestiona los errores sin exponer la API key y evita utilizar `locals()`, `globals()`, `eval()` o `exec()`.
+Mantén las siguientes condiciones:
+- No modifiques los tres métodos existentes.
+- Implementa únicamente las dos nuevas funciones, sin funciones auxiliares adicionales.
+- Utiliza `requests` y `get_env("api_key_open_alex")`.
+- Utiliza tipos básicos de Python: `str`, `int`, `dict` y `list`, sin importar `typing`.
+- No utilices `locals()`, `globals()`, `eval()` ni `exec()`.
+- Mantén el formato JSON de los métodos existentes y gestiona los errores sin exponer la API key.
 
-Genera código sencillo, sin bloques redundantes ni referencias a funciones o variables no definidas, salvo las proporcionadas por la plataforma.
-
-Mantén la autenticación mediante la variable de entorno `api_key_open_alex` y conserva los métodos existentes sin modificar su comportamiento.
+Comprueba que el código no contenga referencias a variables o funciones no definidas.
 ```
 
 **Listado de prompts**
