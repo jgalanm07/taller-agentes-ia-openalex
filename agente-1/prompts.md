@@ -52,5 +52,5 @@ Comprueba que el código no contenga referencias a variables o funciones no defi
 - Recupera 5 publicaciones de la Universidad de Vigo entre 2022 y 2026.
 - Busca 5 publicaciones sobre inteligencia artificial de la Escuela Politécnica Nacional entre 2022 y 2026.
 - Recupera 5 publicaciones de Yoshua Bengio entre 2022 y 2026.
-- Busca al investigador Juan García e identifica sus posibles afiliaciones.
+- Busca al investigador Jorge Galán Mena identifica sus posibles afiliaciones.
 - Genera un dashboard de las publicaciones recuperadas que incluya una tabla de artículos, distribución por año y número de citas.
