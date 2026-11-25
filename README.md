@@ -7,10 +7,13 @@ Materiales para la actividad práctica del taller: la creación de **dos agentes
 ```
 Recursos/
 ├── agente-1/                      Explorador Científico
+│   ├── Guia_taller_Agente_1_Explorador_Cientifico.pdf   Guía paso a paso del taller
 │   ├── instruccion_general.md     Nombre, descripción e instrucción general del agente
 │   └── prompts.md                 Prompts para crear sus herramientas y probarlo
 └── agente-2/                      Radar Científico IA
+    ├── Guia_taller_Agente_2_Radar_Cientifico_IA.pdf     Guía paso a paso del taller
     ├── instruccion_general.md     Nombre, descripción e instrucción general del agente
+    ├── prompts.md                 Prompts de ejemplo para probar el agente
     ├── Skills/
     │   └── SKILL.md               Skill de análisis universitario (SCImago IRIS + OpenAlex)
     └── Conocimiento/              Base de conocimiento SCImago IRIS — Ecuador
@@ -23,6 +26,8 @@ Recursos/
 ## Agente 1 — Explorador Científico
 
 Agente para la **búsqueda, consulta y visualización de publicaciones científicas** mediante la API de [OpenAlex](https://openalex.org). Permite explorar literatura académica, autores e instituciones.
+
+**Guía del taller:** [agente-1/Guia_taller_Agente_1_Explorador_Cientifico.pdf](agente-1/Guia_taller_Agente_1_Explorador_Cientifico.pdf) — pasos detallados de la actividad.
 
 **Cómo armarlo:**
 
@@ -41,12 +46,16 @@ Agente especializado en **análisis bibliométrico, integridad científica y ges
 - **OpenAlex (vía MCP):** producción científica, subcampos, impacto de citación y colaboración.
 - **Base de conocimiento SCImago IRIS:** indicadores de riesgo de integridad científica de las 30 universidades del Ecuador (instantánea del 23-11-2026), con fichas institucionales, índice nacional y metodología.
 
+**Guía del taller:** [agente-2/Guia_taller_Agente_2_Radar_Cientifico_IA.pdf](agente-2/Guia_taller_Agente_2_Radar_Cientifico_IA.pdf) — pasos detallados de la actividad.
+
 **Cómo armarlo:**
 
 1. Crea un agente nuevo y copia el nombre, la descripción y la instrucción general desde [agente-2/instruccion_general.md](agente-2/instruccion_general.md).
 2. Agrega la skill [agente-2/Skills/SKILL.md](agente-2/Skills/SKILL.md), que define el flujo de trabajo del agente: decidir, consultar, comprobar y responder, con rutas separadas para OpenAlex, la base IRIS y el análisis integrado.
 3. Carga los cuatro archivos de [agente-2/Conocimiento/](agente-2/Conocimiento/) como base de conocimiento del agente.
 4. Conecta el servidor MCP de OpenAlex.
+
+**Cómo probarlo:** [agente-2/prompts.md](agente-2/prompts.md) incluye prompts de ejemplo: análisis de producción científica por universidad, indicadores de integridad IRIS a nivel nacional, comparaciones entre instituciones y dashboards interactivos.
 
 **Qué permite hacer:** comparar la producción y el impacto de universidades ecuatorianas, consultar su posición en el índice IRIS, interpretar los nueve indicadores de integridad (retractaciones, autocitación, hiperautoría, revistas descontinuadas, entre otros) y generar informes o dashboards verificables, distinguiendo siempre entre datos directos, contexto indirecto e información no disponible.
 
